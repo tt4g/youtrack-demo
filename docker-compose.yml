@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  youtrack:
+    image: jetbrains/youtrack:2020.2.9836
+    container_name: youtrack-server-instance
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./youtrack/data:/opt/youtrack/data
+      - ./youtrack/conf:/opt/youtrack/conf
+      - ./youtrack/logs:/opt/youtrack/logs
+      - ./youtrack/backups:/opt/youtrack/backups
